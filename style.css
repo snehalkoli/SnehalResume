@@ -1,157 +1,66 @@
 *{
-    margin: 0;
-    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    
 }
 body{
-    background-color: lightblue;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    display: block;
+}
+section{
+    display: block;
 }
 .main-content{
-    position: relative;
-    width: 90%;
-    max-width: 1000px;
     min-height: 1000px;
+    width: 90%;
     margin: 20% auto;
-    background:#fff;
     display: grid;
     grid-template-columns: 300px 700px;
-    box-shadow: 0 35px 55px rgba(0, 0, 0, 0,1);
+    
+
 }
-.main-content .left-section{
-    position: relative;
-    background: #003147;
-    padding: 40px;
+.left-section{
     grid-column: span 1;
+    background-color: gray;
+    
+}
+.right-section{
+    grid-column: span 1 / span 2;
+    background-color: rgb(80, 78, 78);
+    
 }
 .left-content{
     padding: 1rem;
 
 }
-.profile-details{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2)
-}
-.profile-details .imgBx{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border: solid white 5px;
-    border-radius: 30%;
-    overflow: hidden;
+.profile img{
     display: block;
     margin: auto;
-     /* display: block;
-    margin: auto;
     border: solid white 5px;
-    border-radius: 30%;
-    width: 60%; */
+    border-radius: 30px;
+    width: 60%;
 }
-.profile-details .name{
-    color: #fff;
+.name{
     font-size: 1.2rem;
-    margin-top: 20px;
-    text-transform: uppercase;
-    text-align: center;
     font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
     padding: 0.8rem;
     letter-spacing: 0.02px;
-
-    /* font-size: 1.2rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: upp\
-    ercase;
-    padding: 0.8rem;
-    letter-spacing: 0.02px; */
 }
-
-.profile-details .imgBx img{ 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;   
-    
-}
-.profile-details h2 .designation{
+.designation{
     font-size: 1rem;
     text-align: center;
-    font-weight: 300;
+    text-transform: uppercase;
     padding-bottom: 0.5rem;
-    
 }
 .description{
-    font-size: 0.75;
+    font-size: 0.75rem;
     text-align: center;
     padding: 1rem;
-    color: #fff;
-}
-.contact-item{
-    padding-top: 40px;
-}
-.title{
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
-.contact-item ul{
-    position: relative;
-}
-.contact-item ul li{
-    position:relative;
-    list-style: none;
-    margin: 10px 0;
-    cursor: pointer;
-}
-.contact-item ul li .icon{
-    display: inline-block;
-    width: 30px;
-    font-size: 18px;
-    color:#03a9f4 ;
-}
-.contact-item ul li .icon a{
-  text-decoration: none;
-  color:#03a9f4 ;
-}
-.contact-item ul li span{
-    color: #fff;
-    font-weight: 300;
-}
-.contact-item.education li{
-      margin-bottom:15px ;
-}
-.contact-item.education h5{
-     color: #03a9f4;
-     font-weight: 500;
-}
-.contact-item.education h4:nth-child(2){
-    color:#fff;
-    font-weight:600;
-}
-.contact-item.education h4{
-    color:#fff;
-    font-weight: 100;
-}
-.skill-name{
-    font-size: 0.65rem;
-    font-weight: 0.65rem;
-    text-align: left;
-    padding-bottom: 0.5rem;
-    color:#03a9f4;
-    padding-top: 1rem;
-
-    
 }
 .skills-title{
     font-size: 0.75rem;
@@ -160,21 +69,18 @@ body{
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    color: #fff;
+    padding-right: 00.5rem;
+}
+.skill-name{
+    font-size: 0.65rem;
+    font-weight: 0.65rem;
+    text-align: left;
+    padding-bottom: 0.5rem;
 }
 .progress-bar{
     border: solid 1px white;
     height: 4px;
     background-color: white;
-    
-    
-}
-.main-content .right-section{
-    position: relative;
-     grid-column: span 1 / span 2;
-    background: #fff;
-    padding: 40px;
 }
 .right-main-content{
     padding-top: 2rem;
@@ -188,4 +94,9 @@ body{
     font-weight: 700;
     padding: 00.5rem;
     letter-spacing: 1px;
+}
+@media screen and (max-width: 673px) {
+.main-content {
+    grid-template-columns: repeat(1,1fr);
+}
 }
